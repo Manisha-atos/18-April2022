@@ -1,0 +1,8 @@
+create a Spring Application with JDBC template to perform CRUD operation with Product Entity
+1.Add product
+2.Update Product
+3. Delete Product 
+4. searchProduct By Id 
+5. search All Product
+
+please refer demo taken in class StudentManagemnetSystm
