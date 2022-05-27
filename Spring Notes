@@ -83,3 +83,40 @@ Server Side
 Servlet
 JSP
 
+Sprinng MVC Exam[le
+1. create a dynamic web project.
+2.Add tomcat in workspace
+3.Add all jars in lib folder
+4. configure dispatcher servlet in web.xml file
+<servlet>
+  <servlet-name>spring</servlet-name>
+  <servlet-class></servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>spring</servlet-name>
+  <url-pattern>/spring/*</url-pattern>
+  
+  </servlet-mapping>
+  5. added a controller with request mapping 
+  6. add servlet xml  spring-servlet.xml
+  view resolver code
+  
+  <?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+<context:component-scan base-package="com"/>
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<property name="prefix" value="/WEB-INF/views/"></property>
+<property name="suffix" value=".jsp"></property></bean>
+</beans>
+7. create a new folder with name views
+add the jsp pages
+
+
+  
+  
+
