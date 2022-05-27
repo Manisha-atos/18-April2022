@@ -9,3 +9,12 @@ CRUD operation in Spring MVC
 3.SearchProductById
 4.SearchAllProduct
 5.Update Product
+
+
+Reference link
+https://www.javatpoint.com/spring-mvc-crud-example
+
+https://www.javawebtutor.com/articles/spring/configuring-static-resources-in-spring-mvc.php
+
+
+https://sindhitutorials.com/videos/spring-mvc-hibernate-maven/static-resources-spring-mvc-images-css-javase
