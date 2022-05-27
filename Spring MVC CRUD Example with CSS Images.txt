@@ -1,0 +1,11 @@
+Assignment 
+Create a simple MVC example with CSS , Images 
+
+Assignment
+
+CRUD operation in Spring MVC 
+1.Add Product
+2.Delete Product
+3.SearchProductById
+4.SearchAllProduct
+5.Update Product
