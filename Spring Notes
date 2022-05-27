@@ -1,0 +1,85 @@
+Java SE  ->Core Java -> Stand alone applications  
+Java EE  ->Advance Java-> Enterprise/Business application
+Java ME  -> Mobile Applications
+
+
+
+Q.What is enterprise ? 
+     Any business orginization is known as enterprise.
+
+    Enterprises do the business by providing services
+  
+
+Ex.    Colleges   ->Online Admission Form,
+       Hotels     ->Online Order,Online Room booking
+       Banks      ->Witdraw,Deposit,Transfer Fund
+       LICs       ->Online Premium pay /
+       Hospital   ->Online Appointement
+       Transoprt Companies ->booking ticket,cancelling tickets
+
+
+	   
+	   1.Money
+	   2.Man Power(Data...)
+	   
+	   
+	   1.Business to Customer application (ATM)
+	   2.Business to Business  application
+	   
+	   
+	   
+Enteprise applications comprises of Four Layers
+=========================================
+===============================================================================================================
+Presentation Layer                 Service Layer               Data Access Layer                   Data Layer
+===============================================================================================================
+
+Data Layer
+==========
+    RDBMS -MySQL,Oracle
+    NOSQL-Mongo DB,DynomoDB
+    Text File
+    Excel File
+    XML File
+    Collections
+    Another Business application
+	
+	
+    
+Data Access Layer ( spring )--CRUD with data 
+===============
+jdbc/hibernate/jpa/ jdbcTemplate,hibernateTemplate,JpaTemplate,JPARepository
+third party Jar Files
+java.io
+jdbc
+jaxp
+java.util
+servlet api(response.sendRedirect())  (RestTmeplate)
+
+
+Service Layer :Programatical implementation of business rules
+=============
+Java Bean
+Enterprise Java Bean
+Spring Bean
+
+Presentation Layer
+================
+(Static+Dynamic)
+
+Client Side
+=========
+HTML,
+JS
+CSS
+jQuery
+Angular JS
+Angular
+Boot strap
+React
+
+Server Side
+==========
+Servlet
+JSP
+
