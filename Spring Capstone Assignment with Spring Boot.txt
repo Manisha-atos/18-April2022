@@ -1,0 +1,13 @@
+Assignment 3 
+Create a Spring WEB MVC application with images, css
+Implement below
+1.Home Screen
+2.Login Screen
+3.Registration
+
+Assignment 4
+Create a Spring Boot WEB MVC application with images, css
+Implement below
+1.Home Screen
+2.Login Screen
+3.Registration
