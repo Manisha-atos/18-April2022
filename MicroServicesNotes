@@ -1,0 +1,386 @@
+Micro Service with Spring Boot
+=================================
+
+7600# passcodes : 984644 or 702509 or 938002
+
+
+PSTN :0-22-67874110  passcode :831108 
+
+
+Online Shopping Application (Domain Driven Development)
+=======================================================
+PL  SL DAL  DL 
+              
+SOAP ->WSDL -> Top Down,Bootm up
+             wsgen -> JAva ->WSDL
+             wsimprt->WSDL  -> Java
+			 
+
+Restful Webservice
+=================
+If you are providing service (CRUD ->Domain Objects) via http urls
+
+GET 
+POST
+PUT/PATCH
+DELETE
+			 
+			 
+Domain Objects (5)
+===================
+Product =>CRUD
+Customer =>CRUD
+Order =>CRUD
+Payment =>CRUD
+User =>CRUD
+
+product-service  (.Net Web MVC) =>A Team  1111 ->IIS   =>1 Instance (100 req)
+============================================================================
+http://localhost:8081/online-shopping/products     =>GET
+http://localhost:8081/online-shopping/products/101 =>GET
+http://localhost:8081/online-shopping/products/101 =>DELETE
+http://localhost:8081/online-shopping/products/101 =>PUT
+http://localhost:8081/online-shopping/products     =>POST
+
+customer-service  (Java -Spring Boot)  =>B Team =>  8080
+
+===================================================
+http://localhost:8081/online-shopping/customers     =>GET
+http://localhost:8081/online-shopping/csustomers/101 =>GET
+http://localhost:8081/online-shopping/csustomers/101 =>DELETE
+http://localhost:8081/online-shopping/customers/101 =>PUT
+http://localhost:8081/online-shopping/customers     =>POST
+
+order-service  (Node JS -> Express JS)  => C Team  =>1212
+==================================================
+http://localhost:8081/online-shopping/orders      =>GET
+http://localhost:8081/online-shopping/orders/101 =>GET
+http://localhost:8081/online-shopping/orders/101 =>DELETE
+http://localhost:8081/online-shopping/orders/101 =>PUT
+http://localhost:8081/online-shopping/orders     =>POST
+
+
+
+ online-shopping/product                        product-service  ->  1111
+ online-shopping/csutomer                       customer-service ->  2222
+ online-shopping/order       Eureka Server      order-service    ->  3333
+ online-shopping/payment                        payment-service  ->  4444
+ online-shoppinng/user                          user-service     ->  5555
+
+
+online shopping--8081
+
+
+
+
+
+
+Day1
+====
+1.What is MCA?
+================
+Microservices - also known as the microservice architecture - 
+is an architectural style that structures an application as a collection of services that are
+
+	1.Highly maintainable and testable
+	2.Loosely coupled
+	3.Independently deployable
+	4.Organized around single business capabilities. 
+	  (Single Responsibility Principle)
+
+	
+	
+The microservice architecture enables the continuous delivery/deployment of large, complex applications. 
+It also enables an organization to evolve its technology stack.
+
+1.MCA Vs Monolithic
+
+2.Adantages of MCA
+	1.Highly maintainable and testable
+	2.Loosely coupled
+	3.Independently deployable
+	4.Organized around business capabilities.
+3.Challanges of MCA
+   1.Avaialabilty  
+   2.Scaling--100  -p1  1000-p1  delete 
+   3.Monitoring -logs,loads,heap,memory ->actuator -> Admin Server
+   4.Integration 
+4.Orchestration and Choreography
+
+5.What is TDD,BDD,DDD,MDD?
+6.SOLID Design Principles
+7.Design Patterns(creational,Structural,Behavioural)
+8.12 Factor Application
+
+What is DDD?
+=============
+Domain Driven Design is a way of looking at software from top down.
+When we are developing a software our focus should not be primarily on technology,It shouuld be primaryly on business
+ or whatever activity 
+we are trying to assist with software,domain
+The domain is the business that we are trying to solve/assist with software.
+The domain can be any business domain
+
+Aviation domain
+Railway domain
+Banking domain
+Insurance domain
+Manufacturing domain
+Ecommerce domain
+
+A--helloService--java
+B--welcomeService--.net
+
+
+Specifically we approach that by trying to develop the models of that domain and make our software confirmed to that.
+
+What DDD gives us?
+===================
+Strategic Design Tool
+Tactical Design Tools
+
+
+Service
+Project
+Layers(Service/Data Access Layer,Controller)
+Modules
+Design Patterns
+OOP
+Classes
+Objects
+Exe/Jar/war/ear
+
+
+
+
+Why We should go for DDD?
+1.	To improve your craft
+2.	As a software developer you want to grow
+3.	You want to take a responsibility
+4.	You want to design things from scratch
+
+
+It’s not a customers job what they want (Steve Jobs)
+What problems this customer is going to face in the future
+If you want to give any new feature it should go from your side
+
+Your architecture might be fabulous but it’s the end user ultimately who decides whether your system is fabulous or not.
+
+A system that doesn’t solve the business needs is of no use to any one, no matter how pretty it looks or how well architected it’s infrastructure.
+
+
+A microservice is a small, independent, application that performs a highly focused service as well as possible. A web service is an internet-based interface that makes the “services” of one application available to applications running on different platforms.
+Microservices is a new software architecture. It is based on web services. But it can be any service implemented as an independent feature that has its own database and can be deployed independently.
+
+Microservices is an architecture wherein all the components of the system are put into individual components, which can be built, deployed, and scaled individually.
+
+The main point is: a web service is (as the name announces) something that you would expect to "deal" with HTTP - in other words it does something in the context of the world wide web.
+
+Whereas a microservice is not subject to the WWW context. At its core a microservice is supposed to provide one specific service - but there is no restriction to the http protocol for example.
+##########
+What is the difference between Orchestration and Choreography in Microservices architecture?
+################ 
+In Orchestration, we rely on a central system to control and call various Microservices to complete a task.
+
+In Choreography, each Microservice works like a State Machine and reacts based on the input from other parts. 
+
+Orchestration is a tightly coupled approach for integrating Microservices.
+
+But Choreography introduces loose coupling. Also, Choreography based systems are more flexible and easy to change than Orchestration based systems.
+
+Orchestration is often done by synchronous calls. But choreography is done by asynchronous calls. The synchronous calls are much simpler compared to asynchronous communication. 
+
+
+
+                                             withdraw(source,amount)
+fundTransfer(source,desitnation,amount)
+                                             deposit(desination,amount)
+
+
+
+
+
+SOLID principal
+
+
+
+
+S-Single Responsibilty Principle
+
+           
+		   void addEmployee(Employee e){
+		   //add
+		    }
+
+
+O-Open Close Principle 
+
+       Shape
+
+Rect    Circle 	   
+
+          class PaintBrush{		  
+		  
+		  drawShape(Shape s){
+		  s.draw();
+		  }	   	  
+		  
+		  }
+
+
+		  
+		  
+		  
+		  
+
+L-Liscovs Substituion Principle
+I-Interface segration principle
+
+interface Flyable{
+void fly();
+}
+
+interface Drivable{
+void drive();
+}
+
+
+              Vehicle 
+
+Bus    Truck    Bike 	 implements Drivable
+Aeroplane    Helicapter   implement Flyable,Drivable		  
+		  
+
+
+D-Dependency Injection
+          interface EmployeeInterface{
+           Collection<Employee> getEmployeeList()
+{dao
+SOLID
+
+
+		  }
+
+Actuators-monitor the health of an application.production ready features default is info, health
+
+
+Admin Server
+==============
+Monitoring your application by using Spring Boot Actuator Endpoint is slightly difficult. 
+we need to start individual end points in pur application for monitoring , Because, if you have ‘n’ number of applications, every application has separate actuator endpoints, thus making monitoring difficult. Spring Boot Admin Server is an application used to manage and monitor your Microservice application.
+
+
+To handle such situations,CodeCentric Team provides a Spring Boot Admin UI to manage and monitor all your Spring Boot application Actuator endpoints at one place.
+instead of monitoring individual ms we can monitor all in one api provided by codecentric. for example for checking health we need o head/heath , for info we need to hit /info, instead of this we can get 1 interface wher we can monitor all end points
+
+
+
+For building a Spring Boot Admin Server we need to add the below dependencies in your build configuration file.
+
+Maven users can add the below dependencies in your pom.xml file -
+
+<dependency>
+   <groupId>de.codecentric</groupId>
+   <artifactId>spring-boot-admin-server</artifactId>
+</dependency>
+<dependency>
+   <groupId>de.codecentric</groupId>
+   <artifactId>spring-boot-admin-server-ui</artifactId>
+</dependency>
+
+
+package com.tutorialspoint.adminserver;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import de.codecentric.boot.admin.config.EnableAdminServer;
+
+@SpringBootApplication
+@EnableAdminServer
+public class AdminserverApplication {   
+   public static void main(String[] args) {
+      SpringApplication.run(AdminserverApplication.class, args);
+   }
+}
+
+
+Spring Boot Admin Client
+========================
+For monitoring and managing your microservice application via Spring Boot Admin Server, you should add the Spring Boot Admin starter client dependency and point out the Admin Server URI into the application properties file.
+
+Note - For monitoring an application, you should enable the Spring Boot Actuator Endpoints for your Microservice application.
+
+First, add the following Spring Boot Admin starter client dependency and Spring Boot starter actuator dependency in your build configuration file.
+
+Maven users can add the following dependencies in your pom.xml file -
+
+<dependency>
+   <groupId>de.codecentric</groupId>
+   <artifactId>spring-boot-admin-starter-client</artifactId>
+</dependency>
+<dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+
+
+Now, add the Spring Boot Admin Server URL into your application properties file.
+
+For properties file users, add the following properties in the application.properties file.
+
+server.port=1111
+spring.application.name=hello-service
+spring.boot.admin.client.url=http://localhost:9090
+
+management.endpoints.web.exposure.include=*
+management.endpoints.jmx.exposure.include=*
+
+                                                 web.xml
+
+http://localhost:8080/my-app/hello1   
+http://localhost:8080/my-app/hello2
+http://localhost:8080/my-app/hello3
+
+
+======================================================================Day 2===============================================================
+
+=========================
+The Twelve Factors
+==========================
+          This is best practices to develop spring cloud native applications
+
+I. Codebase
+One codebase tracked in revision control, many deploys
+II. Dependencies
+Explicitly declare and isolate dependencies
+III. Config
+Store config in the environment
+IV. Backing services
+Treat backing services as attached resources
+V. Build, release, run
+Strictly separate build and run stages
+VI. Processes
+Execute the app as one or more stateless processes
+VII. Port binding
+Export services via port binding
+VIII. Concurrency
+Scale out via the process model
+IX. Disposability
+Maximize robustness with fast startup and graceful shutdown
+X. Dev/prod parity
+Keep development, staging, and production as similar as possible
+XI. Logs
+Treat logs as event streams
+XII. Admin processes
+Run admin/management tasks as one-off processes
+
+
+Day 2:
+
+use restful microservices to do the CRUD operations
+
+domain objects --onlineshopping -product user order 
+
+
+
+
