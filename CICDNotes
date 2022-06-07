@@ -1,0 +1,108 @@
+What is CI?
+Continuous integration systems are a vital part of any Agile team because they help enforce 
+the ideals of Agile development Jenkins,
+a continuous build tool, enables teams to focus on
+their work by automating the build, artifact management,and deployment processes.
+
+ At a regular frequency (ideally at every commit), the system is:
+ Integrated : All changes up until that point are combined into the project
+ Built: The code is compiled into an executable or package Tested Automated test suites are run
+ Archived:  Versioned and stored so it can be distributed as is, if desired
+ Deployed: Loaded onto a system where the developers can interact with it 
+
+ CI – Benefits
+ Immediate bug detection
+ No integration step in the lifecycle
+ A deployable system at any given point
+ Record of evolution of the project 
+ 
+ Continuous Integration with Jenkins
+ 
+Let us imagine a scenario where the complete source code of the application was built and then deployed on a test server for testing:
+
+1--->First, a developer commits the code to the source code repository.
+2--->Meanwhile, the Jenkins server checks the repository at regular intervals for changes.
+Soon after a commit occurs, the Jenkins server detects the changes that have occurred in the source code repository.
+3--->Jenkins will pull those changes and will start preparing a new build.
+4--->If the build fails, then the pertinent team will be notified.
+5--->If the build is successful, then Jenkins deploys the build in the test server.
+
+What is Jenkins?
+Jenkins is an open source (automation server) Continuous Integration server capable of orchestrating 
+a chain of actions that help to achieve the Continuous Integration process (and not only) 
+in an automated fashion.
+
+Jenkins is free and is entirely written in Java. Jenkins is a widely used application around the
+ world that has around 300k installations and growing day by day.
+
+It is a server-based application and requires a web server like Apache Tomcat.
+The reason Jenkins became so popular is that of its monitoring of repeated tasks which arise during the development of a project. 
+
+For example, if your team is developing a project, Jenkins will continuously test your project builds and show you the errors in
+early stages of your development.
+
+By using Jenkins, software companies can accelerate their software development process, as Jenkins can automate build and test at a rapid rate. Jenkins supports the complete development lifecycle of software from building, testing, documenting the software, deploying and other stages of a software development lifecycle.
+
+Jenkins 
+  - java application(platform independent)
+  - used for continuous integration and continuous delivery
+
+Jenkins’ core functionality and flexibility allow it to fit in a variety of environments and can help streamline the 
+
+development process for all stakeholders involved 
+summary:
+Jenkins is a powerful application that allows continuous integration and continuous delivery of projects, regardless of 
+
+the platform you are working on. It is a free source that can handle any kind of build or continuous integration. You can 
+
+integrate Jenkins with a number of testing and deployment technologies.
+-----------------------------------------------------------------------	
+Topic: Installing Jenkins
+
+Install Java Version 8 – Jenkins is a Java based application, hence Java is a must.
+Install Apache Tomcat Version 9 – Tomcat is required to deploy Jenkins war file.
+Download Jenkins war File – This war is required to install Jenkins.
+Deploy Jenkins war File – Jenkins war file needs to be deployed using Tomcat to run Jenkins.
+Install Suggested Plugins – Install a list of plugins suggested by Jenkins.
+
+--------------------------------
+or 
+
+Step 1 : Download Jenkins war file - https://jenkins.io/
+https://updates.jenkins-ci.org/download/war/
+
+Step 2 : Place the war file into any location on your system
+Step 3 : goto command prompt (windows) | terminal (mac)
+   - goto folder where jenkins.war is
+   - java -jar jenkins.war
+Step 4 : goto browser - http://localhost:8080 (Jenkins window should show up)
+Step 5 : install required plugins
+Step 6 : get started with Jenkins 
+
+Note: By default Jenkins runs at port 8080. To run jenkins on a different port.
+Use the following command at command prompt:
+
+java -jar jenki9ns.war --portHttp=9090
+
+--Method 1: Run Jenkins in a standalone mode
+https://updates.jenkins-ci.org/download/war
+
+user name : admin
+
+change the default password using configire option of the logged in user.
+
+
+-------------------------------------------------------------------------
+There are two ways of starting Jenkins Server
+--Method 1: Run Jenkins in a standalone mode
+java -jar jenkins.war --httpPort=9090
+
+--Method 2:Running via a web Server like Tomcat
+______________________________________________________
+To see hidden files/folders on mac:
+1. Exit Finder
+2. On terminal - defaults write com.apple.finder AppleShowAllFiles TRUE
+3. Press option/alt - right click finder - relaunch
+===================================================
+How to setup Jenkins on Tomcat
+Link to download :https://tomcat.apache.org/download-90.cgi
